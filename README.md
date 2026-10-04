@@ -1,5 +1,9 @@
 # STM32 MPU6050 电机姿态控制
 
+<p align="center">
+  <img src="images/qq_avatar.png" width="150" alt="我的QQ头像">
+</p>
+
 ## 项目简介
 
 本项目是电控组第一次考核题的 STM32F103C8T6 固件框架，使用 MPU6050 获取姿态，通过 PID 串级控制和 TB6612 驱动 TT 减速电机，并通过 VOFA+ FireWater 查看数据、发送目标值。
@@ -72,3 +76,6 @@ VOFA+ 选择 USART1 对应串口，波特率 `115200`、数据位 8、无校验�
 | `VOFA_MODE_IMU` | X 轴角速度、X 轴角加速度、控制姿态角 | 保持角度串级控制 |
 
 编码器输出是当前 16 位 CNT，不是跨溢出的累计位置。控制周期和 PID 增益、限幅可在 `App/Inc/app.h` 修改；默认值仅供上板调试起点，最终需要根据电机、减速比、编码器和机构实测调整。
+
+## 注意
+`Introduction` 中已经提到此项目为ai测试 全部工程和调试由 `ChatGPT-6.1 sol`制作
